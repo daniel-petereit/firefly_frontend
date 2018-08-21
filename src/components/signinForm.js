@@ -6,7 +6,7 @@ import TiSocialGooglePlus from 'react-icons/lib/ti/social-google-plus';
 import FaAmazon from 'react-icons/lib/fa/amazon';
 import axios from 'axios';
 
-let baseURL = process.env.BACKEND_URL;
+let baseURL = "https://sheltered-everglades-52637.herokuapp.com";
 
 
 

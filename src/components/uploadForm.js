@@ -1,5 +1,5 @@
 import React from 'react'
-let baseURL = process.env.BACKEND_URL + '/pics/show/'
+let baseURL = "https://sheltered-everglades-52637.herokuapp.com" + '/pics/show/'
 
 
 class UploadForm extends React.Component {

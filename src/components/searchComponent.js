@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-let getRecentImagesUrl = process.env.BACKEND_URL + '/pics/recentUploads'
+let getRecentImagesUrl = "https://sheltered-everglades-52637.herokuapp.com" + '/pics/recentUploads'
 
 class SearchComponent extends React.Component {
   constructor(props){
@@ -24,8 +24,8 @@ class SearchComponent extends React.Component {
         <div className='inner-div'>
           {
             this.state.imageKeys.reverse().filter(url => url.includes(this.props.match.params.query)).map((key, id) => {
-              let link = process.env.BACKEND_URL + '/pics/show/' + key
-              let tnSrc = process.env.BACKEND_URL + '/pics/show/' + 'tn.' + key
+              let link = "https://sheltered-everglades-52637.herokuapp.com" + '/pics/show/' + key
+              let tnSrc = "https://sheltered-everglades-52637.herokuapp.com" + '/pics/show/' + 'tn.' + key
               return <a key={id} href={link}><img src={tnSrc} /></a>
             })}
         </div>

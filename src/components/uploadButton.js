@@ -13,7 +13,7 @@ class UploadButton extends React.Component {
     let file = event.target.pic.files[0];
     let formData = new FormData();
     formData.append('pic', file)
-    axios.post(process.env.BACKEND_URL + '/api/upload', formData, {
+    axios.post("https://sheltered-everglades-52637.herokuapp.com" + '/api/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
