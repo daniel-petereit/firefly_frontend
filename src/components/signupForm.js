@@ -6,7 +6,7 @@ import FaTwitter from 'react-icons/lib/fa/twitter';
 import TiSocialGooglePlus from 'react-icons/lib/ti/social-google-plus';
 import FaAmazon from 'react-icons/lib/fa/amazon';
 import axios from 'axios'
-let baseURL = "http://localhost:8080";
+let baseURL = process.env.BACKEND_URL;
 
 
 

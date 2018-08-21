@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-let getRecentImagesUrl = 'http://localhost:8080/pics/recentUploads'
+let getRecentImagesUrl = process.env.BACKEND_URL + '/pics/recentUploads'
 
 class HomePageContent extends React.Component {
   constructor(props){
@@ -25,8 +25,8 @@ class HomePageContent extends React.Component {
         <div className='inner-div'>
           {
             this.state.imageKeys.reverse().filter(url => url.includes('')).map((key, id) => {
-              let link = 'http://localhost:8080/pics/show/' + key
-              let tnSrc = 'http://localhost:8080/pics/show/' + 'tn.' + key
+              let link = process.env.BACKEND_URL + '/pics/show/' + key
+              let tnSrc = process.env.BACKEND_URL + '/pics/show/' + 'tn.' + key
               return <a key={id} href={link}><img src={tnSrc} /></a>
             })}
         </div>
